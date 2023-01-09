@@ -44,6 +44,8 @@ $routes->get('Mitglieder', 'Mitglieder::index');
 $routes->get('Reiter', 'Reiter::index');
 
 $routes->post('mitglieder/submit_edit', 'Mitglieder::submit_edit');
+$routes->post('mitglieder/mitglieder/submit_edit', 'Mitglieder::submit_edit');
+$routes->post('mitglieder/loeschenbestaetigen', 'Mitglieder::loeschenbestaetigen');
 $routes->post('Mitglieder', 'Mitglieder::index');
 $routes->post('Login', 'Login::index');
 

@@ -23,7 +23,7 @@
                         </a>
                     </form>
                 </td><td>
-                    <form action="mitglieder/submit_edit" method="post">
+                    <form action="mitglieder/loeschenbestaetigen" method="post">
                         <a>
                             <input type="hidden" value="<?=$mitglieder[$i]['id']?>" name="id" id="id">
                             <button class='btn' name="btnLoeschen"><i class='bi bi-trash3 text-primary'></i></button>
@@ -47,7 +47,8 @@
             <label for="email" class="form-label">E-Mail-Adresse:</label>
             <input type="text" class="form-control" id="email" name="email" value="<?=isset($person['e-mail']) ? $person['e-mail']: ''?>">
         </div>
-        <?php if(!isset($person)){
+        <?php if((isset($person['id']))&& !empty($this->session->get('id'))){
+            if ($this->session->get('id')!=$person['id']){
             echo ('<div class="mb-3"><input type="checkbox" id="check">
             <label for="check">Dem Projekt zugeordnet</label>
         </div>
@@ -55,6 +56,18 @@
             <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
         </div>');
         }else{
+                echo ('<div class="mb-3">
+            <label for="passwort" class="form-label">Passwort:</label>
+            <input type="password" class="form-control" id="passwort" name="passwort" >
+        </div>
+        <div class="mb-3"><input type="checkbox" id="check">
+            <label for="check">Dem Projekt zugeordnet</label>
+        </div>
+        <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
+            <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
+        </div>
+        ');
+            }}else{
             echo ('<div class="mb-3">
             <label for="passwort" class="form-label">Passwort:</label>
             <input type="password" class="form-control" id="passwort" name="passwort" >

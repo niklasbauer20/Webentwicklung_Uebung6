@@ -26,6 +26,16 @@ class Mitglieder extends BaseController
         echo view ('templates/Footer');
     }
 
+    public function loeschenbestaetigen(){
+        if (isset($_POST['btnLoeschen'])){
+            $data['person']=$this->MitgliederModel->getData($_POST['id']);
+        }
+        $data['title']='Mitglied löschen?';
+        echo view('templates/Header',$data);
+        echo view('Mitglieder/bestaetigen', $data);
+        echo view ('templates/Footer');
+    }
+
     public function submit_edit(){
         if (isset($_POST['btnSpeichern'])){
             if (isset($_POST['id'])&&$_POST['id'] != ''){
@@ -37,7 +47,7 @@ class Mitglieder extends BaseController
             return redirect()->to(base_url('Mitglieder'));
 
         }
-        if (isset($_POST['btnLoeschen'])){
+        if (isset($_POST['btnBestaetigen'])){
             $this->MitgliederModel->deletemitglied();
             return redirect()->to(base_url('Mitglieder'));
         }
