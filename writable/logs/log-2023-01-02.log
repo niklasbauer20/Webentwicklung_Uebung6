@@ -1,0 +1,21 @@
+CRITICAL - 2023-01-02 17:12:41 --> Undefined property: App\Controllers\Login::$Mitgliedermodel
+in APPPATH\Controllers\Login.php on line 12.
+ 1 APPPATH\Controllers\Login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$Mitgliedermodel', 'APPPATH\\Controllers\\Login.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 17:24:17 --> Undefined property: App\Controllers\Login::$Mitgliedermodel
+in APPPATH\Controllers\Login.php on line 12.
+ 1 APPPATH\Controllers\Login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$Mitgliedermodel', 'APPPATH\\Controllers\\Login.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 17:25:13 --> Undefined property: App\Controllers\Login::$MitgliederModel
+in APPPATH\Controllers\Login.php on line 12.
+ 1 APPPATH\Controllers\Login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$MitgliederModel', 'APPPATH\\Controllers\\Login.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

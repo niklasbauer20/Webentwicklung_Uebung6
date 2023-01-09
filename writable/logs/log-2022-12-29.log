@@ -1,0 +1,107 @@
+CRITICAL - 2022-12-29 11:52:56 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 222.
+ 1 SYSTEMPATH\CodeIgniter.php(222): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-12-29 11:54:54 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 222.
+ 1 SYSTEMPATH\CodeIgniter.php(222): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-12-29 11:58:08 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 222.
+ 1 SYSTEMPATH\CodeIgniter.php(222): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-12-29 12:06:01 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 222.
+ 1 SYSTEMPATH\CodeIgniter.php(222): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-12-29 11:22:12 --> include(include/Header.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Login.php on line 11.
+ 1 APPPATH\Views\Login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/Header.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\Login.php', 11)
+ 2 APPPATH\Views\Login.php(11): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Login', [], true)
+ 6 APPPATH\Controllers\Login.php(9): view('Login')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 11:25:16 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\codeigniter\app\Controllers\Login.php on line 9
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Login.php(9): view('templates/Header', 'Login')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 11:27:34 --> Undefined variable $data
+in APPPATH\Views\templates\Header.php on line 2.
+ 1 APPPATH\Views\templates\Header.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\templates\\Header.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\Header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/Header', [], true)
+ 5 APPPATH\Controllers\Login.php(10): view('templates/Header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 11:44:40 --> include(include/Header.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Aufgaben\Aufgaben.php on line 12.
+ 1 APPPATH\Views\Aufgaben\Aufgaben.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/Header.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\Aufgaben\\Aufgaben.php', 12)
+ 2 APPPATH\Views\Aufgaben\Aufgaben.php(12): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Aufgaben\\Aufgaben.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Aufgaben/Aufgaben', [], true)
+ 6 APPPATH\Controllers\Aufgaben.php(11): view('Aufgaben/Aufgaben')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:13:46 --> Undefined variable $data
+in APPPATH\Views\templates\Header.php on line 11.
+ 1 APPPATH\Views\templates\Header.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\templates\\Header.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\Header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/Header', [], true)
+ 5 APPPATH\Controllers\Login.php(10): view('templates/Header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:26:16 --> Undefined variable $Mitglieder
+in APPPATH\Views\Mitglieder\Mitglieder.php on line 13.
+ 1 APPPATH\Views\Mitglieder\Mitglieder.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Mitglieder', 'APPPATH\\Views\\Mitglieder\\Mitglieder.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Mitglieder\\Mitglieder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Mitglieder/Mitglieder', [], true)
+ 5 APPPATH\Controllers\Mitglieder.php(21): view('Mitglieder/Mitglieder')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:47:39 --> Call to undefined method App\Controllers\Mitglieder::getData()
+in APPPATH\Controllers\Mitglieder.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:52:03 --> Class "App\Controllers\Models" not found
+in APPPATH\Controllers\Mitglieder.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 14:04:47 --> Undefined array key "Name"
+in APPPATH\Views\Mitglieder\Mitglieder.php on line 15.
+ 1 APPPATH\Views\Mitglieder\Mitglieder.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Name"', 'APPPATH\\Views\\Mitglieder\\Mitglieder.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Mitglieder\\Mitglieder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Mitglieder/Mitglieder', [], true)
+ 5 APPPATH\Controllers\Mitglieder.php(16): view('Mitglieder/Mitglieder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
