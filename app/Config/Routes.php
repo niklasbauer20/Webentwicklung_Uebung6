@@ -42,6 +42,8 @@ $routes->get('Aktuelle_Projekte', 'Aktuelle_Projekte::index');
 $routes->get('Projekte', 'Projekte::index');
 $routes->get('Mitglieder', 'Mitglieder::index');
 $routes->get('Reiter', 'Reiter::index');
+$routes->get('Logout', 'Login::logout');
+
 
 $routes->post('mitglieder/submit_edit', 'Mitglieder::submit_edit');
 $routes->post('mitglieder/mitglieder/submit_edit', 'Mitglieder::submit_edit');

@@ -26,10 +26,12 @@ class Login extends BaseController
                 //password_verify bestätigen.
 
                 if (password_verify($_POST['pwd'], $passwort)) { //immer falsch. Warum?
-                    $id = $this->MitgliederModel->login()['id'];
+                    $userdata = $this->MitgliederModel->login();
                     $this->session->set('loggedin', TRUE);
-                    $this->session->set('id', $id);
-
+                    $this->session->set('id', $userdata['id']);
+                    $this->session->set('username', $userdata['username']);
+                    $this->session->set('e-mail', $userdata['e-mail']);
+                    $this->session->set('projektid', '???');
                     return redirect()->to(base_url('Aktuelle_Projekte'));
                 }
                 else{$data['title'] = 'Login (Passwort oder E-Mail falsch)';
@@ -42,5 +44,11 @@ class Login extends BaseController
         echo view('templates/Header', $data);
         echo view('Login');
         echo view('templates/Footer');
+    }
+
+
+    public function logout(){
+        $this->session->destroy();
+        return redirect()->to(base_url('Login'));
     }
 }

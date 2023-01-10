@@ -48,7 +48,7 @@
             <input type="text" class="form-control" id="email" name="email" value="<?=isset($person['e-mail']) ? $person['e-mail']: ''?>">
         </div>
         <?php if((isset($person['id'])) && !empty($_SESSION['id'])){
-            if ($this->session->get('id')!=$person['id']){
+            if ($_SESSION['id']!=$person['id']){
             echo ('<div class="mb-3"><input type="checkbox" id="check">
             <label for="check">Dem Projekt zugeordnet</label>
         </div>

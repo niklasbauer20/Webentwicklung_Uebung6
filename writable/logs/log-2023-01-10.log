@@ -86,3 +86,40 @@ in APPPATH\Views\Mitglieder\Mitglieder.php on line 51.
  7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-10 12:56:22 --> Error connecting to the database: ErrorException: Uninitialized string offset 0 in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:82
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 82)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\MitgliederModel.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Login.php(18): App\Models\MitgliederModel->login()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-10 12:56:22 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset 0
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mitglieder`
+WHERE `mitglieder`.`e-mail` = :mitglieder.e-mail:', [...], false)
+ 3 APPPATH\Models\MitgliederModel.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Login.php(18): App\Models\MitgliederModel->login()
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-10 12:58:49 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\Mitglieder\Mitglieder.php on line 51.
+ 1 APPPATH\Views\Mitglieder\Mitglieder.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\Mitglieder\\Mitglieder.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Mitglieder\\Mitglieder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Mitglieder/Mitglieder', [], true)
+ 5 APPPATH\Controllers\Mitglieder.php(25): view('Mitglieder/Mitglieder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
