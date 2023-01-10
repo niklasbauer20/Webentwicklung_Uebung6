@@ -16,7 +16,7 @@ class Login extends BaseController
     {
         if (isset($_POST['pwd']) && isset($_POST['email'])) {
             if ($this->MitgliederModel->login() != NULL) {
-                $userdata = $this->MitgliederModel->login();
+                $passwort = $this->MitgliederModel->login()['passwort'];
                // echo $userdata['passwort'];
                // echo $_POST['pwd'];
                // $hased=password_hash($_POST['pwd'], PASSWORD_DEFAULT);
@@ -26,11 +26,11 @@ class Login extends BaseController
                 //$userdata['passwort'] stimmt mit dem Passwort aus der Datenbank überein, lässt sich jedoch nicht durch
                 //password_verify bestätigen.
 
-                if (password_verify($_POST['pwd'], $userdata['passwort'])) {
+                if (password_verify($_POST['pwd'], $passwort)) { //immer falsch. Warum?
+                    $id = $this->MitgliederModel->login()['id'];
                     $this->session->set('loggedin', TRUE);
-                    $this->session->set('id', $userdata['id']);
-                    $this->session->set('username', $userdata['username']);
-                    $this->session->set('e-mail', $userdata['e-mail']);
+                    $this->session->set('id', $id);
+
                     return redirect()->to(base_url('Aktuelle_Projekte'));
                 }
                 else{$data['title'] = 'Login (Passwort oder E-Mail falsch)';
