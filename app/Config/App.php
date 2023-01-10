@@ -24,7 +24,9 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/codeigniteru6/public';
+    //public $baseURL = 'http://localhost/codeigniteru6/public';
+    public $baseURL = 'http://nibaueweb.de/';
+
 
     /**
      * --------------------------------------------------------------------------
