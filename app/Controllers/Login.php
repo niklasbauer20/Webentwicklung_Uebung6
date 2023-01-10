@@ -23,9 +23,9 @@ class Login extends BaseController
                 //   echo 'true';
                 //}
                 //$userdata['passwort'] stimmt mit dem Passwort aus der Datenbank überein, lässt sich jedoch nicht durch
-                //password_verify bestätigen.
+                //password_verify bestätigen. -> Datenbankfeld für passwort auf 100 Zeichen vergrößert!
 
-                if (password_verify($_POST['pwd'], $passwort)) { //immer falsch. Warum?
+                if (password_verify($_POST['pwd'], $passwort)) { //immer falsch. Warum? -> Datenbankfeld war zu klein!!!
                     $userdata = $this->MitgliederModel->login();
                     $this->session->set('loggedin', TRUE);
                     $this->session->set('id', $userdata['id']);
