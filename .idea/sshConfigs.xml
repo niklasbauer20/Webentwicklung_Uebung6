@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="nibaueweb.de" id="7a5bd342-bee1-46d8-a3c5-3f683d171631" port="22" nameFormat="DESCRIPTIVE" username="nibaue_0" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
