@@ -35,7 +35,7 @@
             </tbody>
         </table>
         <div class="h3 mt-5">
-            Bearbeiten/Erstellen:
+            <?=isset($person['id']) ? 'Bearbeiten': 'Erstellen'?>
         </div>
     <form action="mitglieder/submit_edit" method="post">
         <input type="hidden" name="id" id="id" value="<?=isset($person['id']) ? $person['id']: ''?>" >
@@ -47,7 +47,7 @@
             <label for="email" class="form-label">E-Mail-Adresse:</label>
             <input type="text" class="form-control" id="email" name="email" value="<?=isset($person['e-mail']) ? $person['e-mail']: ''?>">
         </div>
-        <?php if((isset($person['id']))&& !empty($this->session->get('id'))){
+        <?php if((isset($person['id'])) && !empty($_SESSION['id'])){
             if ($this->session->get('id')!=$person['id']){
             echo ('<div class="mb-3"><input type="checkbox" id="check">
             <label for="check">Dem Projekt zugeordnet</label>

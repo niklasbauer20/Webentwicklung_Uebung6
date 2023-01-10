@@ -17,12 +17,11 @@ class Login extends BaseController
         if (isset($_POST['pwd']) && isset($_POST['email'])) {
             if ($this->MitgliederModel->login() != NULL) {
                 $passwort = $this->MitgliederModel->login()['passwort'];
-               // echo $userdata['passwort'];
-               // echo $_POST['pwd'];
-               // $hased=password_hash($_POST['pwd'], PASSWORD_DEFAULT);
-               // if (password_verify( $_POST['pwd'], $hased )){
-               //     echo 'true';
-               // }
+                //echo $passwort;
+                //$hased=password_hash($_POST['pwd'], PASSWORD_DEFAULT);
+                //if (password_verify( $_POST['pwd'], $hased )){
+                //   echo 'true';
+                //}
                 //$userdata['passwort'] stimmt mit dem Passwort aus der Datenbank überein, lässt sich jedoch nicht durch
                 //password_verify bestätigen.
 
