@@ -18,6 +18,7 @@ class Mitglieder extends BaseController
         }
 
         $data['mitglieder']= $this->MitgliederModel->getData();
+        $data['mitgliederprojekt']= $this->MitgliederModel->getPersoninProjekt($_SESSION['projektid']);
 
         $data['title']='Mitglieder';
         echo view('templates/Header',$data);

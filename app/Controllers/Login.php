@@ -15,6 +15,9 @@ class Login extends BaseController
     public function index()
     {
         if (isset($_POST['pwd']) && isset($_POST['email'])) {
+           if( $this->validation->run($this->request->getPost(), 'login')){
+
+
             if ($this->MitgliederModel->login() != NULL) {
                 $passwort = $this->MitgliederModel->login()['passwort'];
                 //echo $passwort;
@@ -31,14 +34,21 @@ class Login extends BaseController
                     $this->session->set('id', $userdata['id']);
                     $this->session->set('username', $userdata['username']);
                     $this->session->set('e-mail', $userdata['e-mail']);
-                    $this->session->set('projektid', '???');
-                    return redirect()->to(base_url('Aktuelle_Projekte'));
+                    $this->session->set('projektid', '0');
+                    return redirect()->to(base_url('Projekte'));
                 }
-                else{$data['title'] = 'Login (Passwort oder E-Mail falsch)';
+                else{$data['title'] = 'Login (Eingabe Fehlerhaft)';
                     echo view('templates/Header', $data);
                     echo view('Login');
                     return view('templates/Footer');}
-            }
+            }}else{
+               $data['eingaben'] = $_POST;
+               $data['error'] = $this->validation->getErrors();
+               $data['title'] = 'Login';
+               echo view('templates/Header', $data);
+               echo view('Login', $data);
+               return view('templates/Footer');
+           }
         }
         $data['title'] = 'Login';
         echo view('templates/Header', $data);

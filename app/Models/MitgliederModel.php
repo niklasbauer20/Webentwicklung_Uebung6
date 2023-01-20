@@ -1,6 +1,7 @@
 <?php
 namespace App\Models;
 use CodeIgniter\Model;
+use function Sodium\add;
 
 class MitgliederModel extends Model
 {
@@ -28,12 +29,25 @@ class MitgliederModel extends Model
      return $result->getResultArray();
 
  }
+    public function getPersoninProjekt($id=NULL){
+        $this->personen=$this->db->table('projekte_mitglieder');
+        $this->personen->select('mitgliedid, id, username');
+        $this->personen->join('mitglieder', 'mitgliedid=mitglieder.id');
+        $this->personen->where('projektid',$id);
+        $result= $this->personen->get();
+        return $result->getResultArray();
+    }
 
     public function createmitglied() {
         $this->personen = $this->db->table('mitglieder');
         $this->personen->insert(array('username' => $_POST['username'],
             'e-mail' => $_POST['email'],
             'passwort' => password_hash($_POST['passwort'], PASSWORD_DEFAULT)));
+        if (isset($_POST['check'])){
+            $this->eintrag = $this->db->table('projekte_mitglieder');
+            $this->eintrag->insert(array('projektid' => $_SESSION['projektid'],
+                'mitgliedid' => $_POST['id']));
+        }
     }
 
     public function updatemitglied() {
@@ -54,6 +68,7 @@ class MitgliederModel extends Model
         $this->personen = $this->db->table('mitglieder');
         $this->personen->where('mitglieder.id', $_POST['id']);
         $this->personen->delete();
+
     }
 
 

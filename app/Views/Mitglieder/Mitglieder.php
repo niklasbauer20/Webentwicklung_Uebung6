@@ -14,7 +14,7 @@
             <tr>
                 <td> <?=$mitglieder[$i]['username'] ?> </td>
                 <td> <?=$mitglieder[$i]['e-mail'] ?> </td>
-                <td><input type="checkbox"> </td>
+                <td><input name="inprojekt" <?=(array_key_exists($mitglieder[$i]['id'], $mitgliederprojekt))? 'checked' : '' ?> type="checkbox" disabled> </td>
                 <td>
                     <form action="Mitglieder" method="post">
                         <a>
@@ -49,8 +49,8 @@
         </div>
         <?php if((isset($person['id'])) && !empty($_SESSION['id'])){
             if ($_SESSION['id']!=$person['id']){
-            echo ('<div class="mb-3"><input type="checkbox" id="check">
-            <label for="check">Dem Projekt zugeordnet</label>
+            echo ('<div class="mb-3"><input type="checkbox" id="check" name="check">
+            <label for="check" >Dem Projekt zugeordnet</label>
         </div>
         <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
             <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
@@ -60,8 +60,8 @@
             <label for="passwort" class="form-label">Passwort:</label>
             <input type="password" class="form-control" id="passwort" name="passwort" >
         </div>
-        <div class="mb-3"><input type="checkbox" id="check">
-            <label for="check">Dem Projekt zugeordnet</label>
+        <div class="mb-3"><input type="checkbox" id="check" name="check">
+            <label for="check" >Dem Projekt zugeordnet</label>
         </div>
         <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
             <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
@@ -72,8 +72,8 @@
             <label for="passwort" class="form-label">Passwort:</label>
             <input type="password" class="form-control" id="passwort" name="passwort" >
         </div>
-        <div class="mb-3"><input type="checkbox" id="check">
-            <label for="check">Dem Projekt zugeordnet</label>
+        <div class="mb-3"><input type="checkbox" id="check" name="check">
+            <label for="check" >Dem Projekt zugeordnet</label>
         </div>
         <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
             <button type="submit" name="btnReset" class="btn btn-success">Reset</button>

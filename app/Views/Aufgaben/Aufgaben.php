@@ -1,38 +1,5 @@
 
     <div class="col-8">
-
-        <?php
-        $Aufgaben = array(
-                array(
-                        'Aufgabenbezeichnung'=>'HTML Datei erstellen',
-                        'Beschreibung der Aufgabe'=>'HTML Datei erstellen',
-                        'Reiter'=>'TooDo',
-                        'Zuständig'=>'Max Mustermann'
-                ),array(
-                        'Aufgabenbezeichnung'=>'CSS Datei erstellen',
-                        'Beschreibung der Aufgabe'=>'CSS Datei erstellen',
-                        'Reiter'=>'ToDo',
-                        'Zuständig'=>'Max Mustermann'
-                ),array(
-                        'Aufgabenbezeichnung'=>'PC eingeschaltet',
-                        'Beschreibung der Aufgabe'=>'PC einschalten',
-                        'Reiter'=>'Erledigt',
-                        'Zuständig'=>'Max Mustermann'
-                ),array(
-                        'Aufgabenbezeichnung'=>'Kaffee trinken',
-                        'Beschreibung der Aufgabe'=>'Kaffee trinken',
-                        'Reiter'=>'Erledigt',
-                        'Zuständig'=>'Petra Müller'
-                ),array(
-                        'Aufgabenbezeichnung'=>'Für die Uni lernen',
-                        'Beschreibung der Aufgabe'=>'Für die Uni lernen.',
-                        'Reiter'=>'Verschoben',
-                        'Zuständig'=>'Max Mustermann'
-                )
-        )
-        ?>
-
-
         <table class="table mb-5 ">
             <thead>
             <tr class="bg-light">
@@ -44,21 +11,17 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-            $i=0;
-            while ($i<count($Aufgaben)) {
-                echo '<tr>';
-                echo '<td>' . $Aufgaben[$i]['Aufgabenbezeichnung'] . '</td>';
-                echo '<td>' . $Aufgaben[$i]['Beschreibung der Aufgabe'] . '</td>';
-                echo '<td>' . $Aufgaben[$i]['Reiter'] . '</td>';
-                echo '<td>' . $Aufgaben[$i]['Zuständig'] . '</td>';
-                echo("<td><button class='btn'><i class='bi bi-pencil-square text-primary'></i> </button>
-                       <button class='btn'><i class='bi bi-trash3 text-primary'></i></button> </td>");
-                echo '</tr>';
-                $i++;
-            }
-            ?>
+            <?php foreach ($aufgaben as $item): ?>
 
+                <tr>
+                    <td><?=$item['name'] ?> </td>
+                    <td><?= $item['beschreibung']?></td>
+                    <td><?= $item['reiter'] ?></td>
+                    <td><?= $item['zuständig'] ?></td>
+                    <td><button class='btn'><i class='bi bi-pencil-square text-primary'></i> </button>
+                       <button class='btn'><i class='bi bi-trash3 text-primary'></i></button> </td>
+                </tr>
+            <?php endforeach?>
             </tbody>
         </table>
         <div class="h3 mt-5">
@@ -82,21 +45,23 @@
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Zugeh&ouml;riger Reiter:</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>ToDo</option>
-                <option value="1">Erledigt</option>
-                <option value="2">Verschoben</option>
+            <select class="form-select" name="reiterid" aria-label="Default select example">
+                <option value="0" selected>--bitte wählen--</option>
+                <?php foreach ($reiter as $item):?>
+                    <option value="<?= $item['id']?>"><?= $item['name']?></option>
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Zust&auml;ndig:</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Max Mustermann</option>
-                <option value="1">Petra M&uuml;ller</option>
+            <select class="form-select" name="mitarbeiterid" multiple>
+                <?php foreach ($mitglieder as $item):?>
+                <option class="bg-primary" value="<?= $item['id']?>"><?= $item['username']?></option>
+                <?php endforeach; ?>
             </select>
         </div>
-        <div><button type="submit" class="btn btn-primary">Speichern</button>
-            <button type="submit" class="btn btn-success">Reset</button>
+        <div><button type="submit" name="btnSpeichern" id="btnSpeichern" class="btn btn-primary">Speichern</button>
+            <button type="submit" name="btnReset" id="btnReset" class="btn btn-success">Reset</button>
         </div>
 
     </div>

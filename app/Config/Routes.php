@@ -44,12 +44,26 @@ $routes->get('Mitglieder', 'Mitglieder::index');
 $routes->get('Reiter', 'Reiter::index');
 $routes->get('Logout', 'Login::logout');
 
+//Login
+$routes->post('Login', 'Login::index');
 
+
+//Mitglieder
 $routes->post('mitglieder/submit_edit', 'Mitglieder::submit_edit');
 $routes->post('mitglieder/mitglieder/submit_edit', 'Mitglieder::submit_edit');
 $routes->post('mitglieder/loeschenbestaetigen', 'Mitglieder::loeschenbestaetigen');
 $routes->post('Mitglieder', 'Mitglieder::index');
-$routes->post('Login', 'Login::index');
+
+//Projekte
+$routes->post('Projekte', 'Projekte::index');
+$routes->post('Projekte/submit_edit', 'Projekte::submit_edit');
+$routes->post('Projekte/Projekte/submit_edit', 'Projekte::submit_edit');
+
+//Reiter
+$routes->post('Reiter/submit_edit', 'Reiter::submit_edit');
+$routes->post('Reiter/Reiter/submit_edit', 'Reiter::submit_edit');
+$routes->post('Reiter/loeschenbestaetigen', 'Reiter::loeschenbestaetigen');
+$routes->post('Reiter', 'Reiter::index');
 
 
 
