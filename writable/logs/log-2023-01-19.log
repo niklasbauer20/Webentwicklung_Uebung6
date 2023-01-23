@@ -1,0 +1,399 @@
+CRITICAL - 2023-01-19 07:21:39 --> Undefined variable $reiter
+in APPPATH\Views\Reiter\Reiter.php on line 12.
+ 1 APPPATH\Views\Reiter\Reiter.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reiter', 'APPPATH\\Views\\Reiter\\Reiter.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reiter\\Reiter.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reiter/Reiter', [], true)
+ 5 APPPATH\Controllers\Reiter.php(25): view('Reiter/Reiter', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Reiter->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reiter))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 07:21:55 --> Undefined variable $mitglieder
+in APPPATH\Views\Reiter\Reiter.php on line 19.
+ 1 APPPATH\Views\Reiter\Reiter.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mitglieder', 'APPPATH\\Views\\Reiter\\Reiter.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reiter\\Reiter.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reiter/Reiter', [], true)
+ 5 APPPATH\Controllers\Reiter.php(25): view('Reiter/Reiter', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Reiter->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reiter))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 07:36:22 --> Undefined array key "name"
+in APPPATH\Models\ReiterModel.php on line 26.
+ 1 APPPATH\Models\ReiterModel.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'APPPATH\\Models\\ReiterModel.php', 26)
+ 2 APPPATH\Controllers\Reiter.php(45): App\Models\ReiterModel->createReiter()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Reiter->submit_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reiter))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 08:39:11 --> Undefined variable $aufgaben
+in APPPATH\Views\Aufgaben\Aufgaben.php on line 14.
+ 1 APPPATH\Views\Aufgaben\Aufgaben.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aufgaben', 'APPPATH\\Views\\Aufgaben\\Aufgaben.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Aufgaben\\Aufgaben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Aufgaben/Aufgaben', [], true)
+ 5 APPPATH\Controllers\Aufgaben.php(12): view('Aufgaben/Aufgaben')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 08:42:06 --> Undefined array key "zuständig"
+in APPPATH\Views\Aufgaben\Aufgaben.php on line 20.
+ 1 APPPATH\Views\Aufgaben\Aufgaben.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "zuständig"', 'APPPATH\\Views\\Aufgaben\\Aufgaben.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Aufgaben\\Aufgaben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Aufgaben/Aufgaben', [], true)
+ 5 APPPATH\Controllers\Aufgaben.php(32): view('Aufgaben/Aufgaben', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 08:54:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reite...' at line 1 in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgabe...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgabe...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgabe...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgabe...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 08:54:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reite...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>" mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>" mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>" mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>" mitglieder.username"</li>"
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`', [], false)
+ 5 APPPATH\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 08:56:05 --> mysqli_sql_exception: Column 'id' in order clause is ambiguous in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgabe...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgabe...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgabe...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgabe...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 08:56:05 --> Column 'id' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `id`', [], false)
+ 5 APPPATH\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 08:57:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`...' at line 1 in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgabe...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgabe...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgabe...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgabe...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 08:57:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", mitglieder.username  "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", mitglieder.username  "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", mitglieder.username  "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", mitglieder.username  "</li>") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`', [], false)
+ 5 APPPATH\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 08:58:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reit...' at line 1 in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgabe...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgabe...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgabe...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgabe...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 08:58:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reit...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>" seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>" seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>" seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aufgaben`.`name` As `name`, `aufgaben`.`beschreibung` As `beschreibung`, `reiter`.`name` As `reiter`, group_concat("<li>", `mitglieder`.`username`, "</li>" seperator "") As zuständig
+FROM `aufgaben`
+JOIN `reiter` ON `aufgaben`.`reiter`=`reiter`.`id`
+JOIN `aufgaben_mitglieder` ON `aufgaben_mitglieder`.`aufgabeid`=`aufgaben`.`id`
+JOIN `mitglieder` ON `aufgaben_mitglieder`.`mitgliedid`=`mitglieder`.`id`
+ORDER BY `aufgaben`.`id`', [], false)
+ 5 APPPATH\Models\AufgabenModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Aufgaben.php(27): App\Models\AufgabenModel->getData()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:18:21 --> Undefined variable $_Session
+in APPPATH\Models\MitgliederModel.php on line 21.
+ 1 APPPATH\Models\MitgliederModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $_Session', 'APPPATH\\Models\\MitgliederModel.php', 21)
+ 2 APPPATH\Controllers\Mitglieder.php(20): App\Models\MitgliederModel->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:19:29 --> Undefined variable $_Session
+in APPPATH\Models\MitgliederModel.php on line 21.
+ 1 APPPATH\Models\MitgliederModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $_Session', 'APPPATH\\Models\\MitgliederModel.php', 21)
+ 2 APPPATH\Controllers\Mitglieder.php(20): App\Models\MitgliederModel->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:31:51 --> Undefined array key 2
+in APPPATH\Views\Projekte\Projekte.php on line 7.
+ 1 APPPATH\Views\Projekte\Projekte.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Views\\Projekte\\Projekte.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Projekte\\Projekte.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Projekte/Projekte', [], true)
+ 5 APPPATH\Controllers\Projekte.php(35): view('Projekte/Projekte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:39:04 --> Undefined array key 2
+in APPPATH\Views\Projekte\Projekte.php on line 7.
+ 1 APPPATH\Views\Projekte\Projekte.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Views\\Projekte\\Projekte.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Projekte\\Projekte.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Projekte/Projekte', [], true)
+ 5 APPPATH\Controllers\Projekte.php(36): view('Projekte/Projekte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:40:39 --> Undefined array key 2
+in APPPATH\Views\Projekte\Projekte.php on line 7.
+ 1 APPPATH\Views\Projekte\Projekte.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Views\\Projekte\\Projekte.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Projekte\\Projekte.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Projekte/Projekte', [], true)
+ 5 APPPATH\Controllers\Projekte.php(36): view('Projekte/Projekte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:52:56 --> Undefined array key 2
+in APPPATH\Views\Projekte\Projekte.php on line 7.
+ 1 APPPATH\Views\Projekte\Projekte.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Views\\Projekte\\Projekte.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Projekte\\Projekte.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Projekte/Projekte', [], true)
+ 5 APPPATH\Controllers\Projekte.php(36): view('Projekte/Projekte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 13:54:27 --> Undefined array key "Name"
+in APPPATH\Controllers\Projekte.php on line 22.
+ 1 APPPATH\Controllers\Projekte.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Name"', 'APPPATH\\Controllers\\Projekte.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 14:44:16 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\MitgliederModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Mitglieder.php(21): App\Models\MitgliederModel->getPersoninProjekt('4')
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 14:44:16 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `projekte_mitglieder`
+WHERE `id` = \'4\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `projekte_mitglieder`
+WHERE `id` = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `projekte_mitglieder`
+WHERE `id` = \'4\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projekte_mitglieder`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\MitgliederModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Mitglieder.php(21): App\Models\MitgliederModel->getPersoninProjekt('4')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 14:44:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Projekte.php on line 23.
+ 1 APPPATH\Controllers\Projekte.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Projekte.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 15:01:23 --> Undefined array key "projektzuordnen"
+in APPPATH\Models\MitgliederModel.php on line 44.
+ 1 APPPATH\Models\MitgliederModel.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projektzuordnen"', 'APPPATH\\Models\\MitgliederModel.php', 44)
+ 2 APPPATH\Controllers\Mitglieder.php(46): App\Models\MitgliederModel->createmitglied()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 15:02:36 --> Undefined array key "projektzuordnen"
+in APPPATH\Models\MitgliederModel.php on line 44.
+ 1 APPPATH\Models\MitgliederModel.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projektzuordnen"', 'APPPATH\\Models\\MitgliederModel.php', 44)
+ 2 APPPATH\Controllers\Mitglieder.php(46): App\Models\MitgliederModel->createmitglied()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-19 15:04:39 --> Undefined constant "App\Models\checked"
+in APPPATH\Models\MitgliederModel.php on line 44.
+ 1 APPPATH\Controllers\Mitglieder.php(46): App\Models\MitgliederModel->createmitglied()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-19 15:05:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`webentwicklung`.`projekte_mitglieder`, CONSTRAINT `mitg_to_pro_mitg` FOREIGN KEY (`mitgliedid`) REFERENCES `mitglieder` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\MitgliederModel.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Mitglieder.php(46): App\Models\MitgliederModel->createmitglied()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-19 15:05:27 --> Cannot add or update a child row: a foreign key constraint fails (`webentwicklung`.`projekte_mitglieder`, CONSTRAINT `mitg_to_pro_mitg` FOREIGN KEY (`mitgliedid`) REFERENCES `mitglieder` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (:projektid:, :mitgliedid:)', [...], false)
+ 5 APPPATH\Models\MitgliederModel.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Mitglieder.php(46): App\Models\MitgliederModel->createmitglied()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

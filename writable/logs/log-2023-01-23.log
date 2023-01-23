@@ -1,0 +1,19 @@
+CRITICAL - 2023-01-23 06:41:24 --> Undefined array key "projektid"
+in APPPATH\Views\templates\Menue.php on line 5.
+ 1 APPPATH\Views\templates\Menue.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projektid"', 'APPPATH\\Views\\templates\\Menue.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\Menue.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/Menue', [], true)
+ 5 APPPATH\Controllers\Aktuelle_Projekte.php(21): view('templates/Menue')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aktuelle_Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aktuelle_Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-23 06:59:16 --> Undefined array key "mitgliederids"
+in APPPATH\Models\AufgabenModel.php on line 89.
+ 1 APPPATH\Models\AufgabenModel.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mitgliederids"', 'APPPATH\\Models\\AufgabenModel.php', 89)
+ 2 APPPATH\Controllers\Aufgaben.php(44): App\Models\AufgabenModel->updateAufgabe()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Aufgaben->submit_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

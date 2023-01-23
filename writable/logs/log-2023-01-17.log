@@ -1,0 +1,20 @@
+CRITICAL - 2023-01-17 14:39:47 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(611): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(797): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Projekte.php(21): CodeIgniter\Model->__call('getData', [])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-17 14:59:44 --> Undefined array key "name"
+in APPPATH\Views\Projekte\Projekte.php on line 9.
+ 1 APPPATH\Views\Projekte\Projekte.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'APPPATH\\Views\\Projekte\\Projekte.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Projekte\\Projekte.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Projekte/Projekte', [], true)
+ 5 APPPATH\Controllers\Projekte.php(26): view('Projekte/Projekte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Projekte->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Projekte))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
