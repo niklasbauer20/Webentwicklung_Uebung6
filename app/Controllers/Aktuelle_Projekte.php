@@ -14,7 +14,8 @@ class Aktuelle_Projekte extends BaseController
     }
     public function index()
     {
-        $data['reiterundaufgaben']= $this->Aktuelle_Projekte->getData();
+        $data['aufgaben']= $this->Aktuelle_Projekte->getData();
+        $data['reiter'] = $this->Aktuelle_Projekte->getReiter();
         $data['title']='Aktuelle Projekte';
         echo view('templates/Header',$data);
         echo view ('templates/Menue');

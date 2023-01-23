@@ -37,6 +37,10 @@ class ProjektModel extends Model
     }
 
     public function deleteProject() {
+        $this->eintrag = $this->db->table('projekte_mitglieder');
+        $this->eintrag->where('projektid', $_POST['id']);
+        $this->eintrag->delete();
+
         $this->project = $this->db->table('projekte');
         $this->project->where('projekte.id', $_POST['id']);
         $this->project->delete();

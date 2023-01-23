@@ -19,7 +19,7 @@
         </div>
 
         <div class="form-group m-2 p-1">
-            <input type="checkbox"  class="form-check-input <?= (isset($error['agb']))? 'is-invalid' : '' ?>" name="agb" id="agb"><label class="ms-2"> AGBs und Datenschutzbedingungen akzeptieren</label>
+            <input type="checkbox" checked  class="form-check-input <?= (isset($error['agb']))? 'is-invalid' : '' ?>" name="agb" id="agb"><label class="ms-2"> AGBs und Datenschutzbedingungen akzeptieren</label>
             <div class="invalid-feedback">
                 <?= (isset($error['agb'])) ? $error['agb']: ''?>
             </div>
@@ -28,8 +28,6 @@
         <button type="submit" class="btn submit-button btn-primary mt-2 ms-2 p-1 ">Einloggen</button>
 
         <div class="ms-2 p-1">Noch nicht registiert? <a href="#">Registierung</a></div>
-
-        <div class="m-2 p-1">Da der Login-Vorgang noch nicht realisiert wurde: <a href="Aktuelle_Projekte">Überspringen</a></div>
 
 
     </form>

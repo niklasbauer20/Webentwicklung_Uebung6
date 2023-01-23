@@ -65,8 +65,10 @@ $routes->post('Reiter/Reiter/submit_edit', 'Reiter::submit_edit');
 $routes->post('Reiter/loeschenbestaetigen', 'Reiter::loeschenbestaetigen');
 $routes->post('Reiter', 'Reiter::index');
 
-
-
+//Aufgaben
+$routes->post('Aufgaben/submit_edit', 'Aufgaben::submit_edit');
+$routes->post('Aufgaben/Aufgaben/submit_edit', 'Aufgaben::submit_edit');
+$routes->post('Aufgaben', 'Aufgaben::index');
 
 
 

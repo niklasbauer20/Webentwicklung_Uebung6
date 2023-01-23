@@ -14,7 +14,13 @@
             <tr>
                 <td> <?=$mitglieder[$i]['username'] ?> </td>
                 <td> <?=$mitglieder[$i]['e-mail'] ?> </td>
-                <td><input name="inprojekt" <?=(array_key_exists($mitglieder[$i]['id'], $mitgliederprojekt))? 'checked' : '' ?> type="checkbox" disabled> </td>
+                <td> <input type="checkbox" disabled
+                        <?php foreach ($mitgliederprojekt as $item):?>
+
+                        <?=($item['id']==$mitglieder[$i]['id'])? 'checked' : '';?>
+
+
+                     <?php endforeach  ?> ></td>
                 <td>
                     <form action="Mitglieder" method="post">
                         <a>
@@ -47,39 +53,33 @@
             <label for="email" class="form-label">E-Mail-Adresse:</label>
             <input type="text" class="form-control" id="email" name="email" value="<?=isset($person['e-mail']) ? $person['e-mail']: ''?>">
         </div>
-        <?php if((isset($person['id'])) && !empty($_SESSION['id'])){
-            if ($_SESSION['id']!=$person['id']){
-            echo ('<div class="mb-3"><input type="checkbox" id="check" name="check">
-            <label for="check" >Dem Projekt zugeordnet</label>
-        </div>
-        <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
-            <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
-        </div>');
-        }else{
-                echo ('<div class="mb-3">
+        <?php if((isset($person['id']))){
+            if ($_SESSION['id']==$person['id']){
+            echo ('<div class="mb-3">
             <label for="passwort" class="form-label">Passwort:</label>
             <input type="password" class="form-control" id="passwort" name="passwort" >
-        </div>
-        <div class="mb-3"><input type="checkbox" id="check" name="check">
-            <label for="check" >Dem Projekt zugeordnet</label>
-        </div>
-        <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
-            <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
-        </div>
-        ');
+        </div>');
+        }else{
+                '';
             }}else{
             echo ('<div class="mb-3">
             <label for="passwort" class="form-label">Passwort:</label>
             <input type="password" class="form-control" id="passwort" name="passwort" >
         </div>
-        <div class="mb-3"><input type="checkbox" id="check" name="check">
+        ');
+        } ?>
+        <div class="mb-3"><input type="checkbox" id="check" name="check"
+                <?php foreach ($mitgliederprojekt as $item):?>
+
+                    <?=(isset($person['id'])&&$item['id']==$person['id'])? 'checked' : '';?>
+
+
+                <?php endforeach  ?>>
             <label for="check" >Dem Projekt zugeordnet</label>
         </div>
         <div><button type="submit" name="btnSpeichern" class="btn btn-primary">Speichern</button>
             <button type="submit" name="btnReset" class="btn btn-success">Reset</button>
         </div>
-        ');
-        } ?>
     </form>
     </div>
 

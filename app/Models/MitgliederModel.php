@@ -30,11 +30,12 @@ class MitgliederModel extends Model
 
  }
     public function getPersoninProjekt($id=NULL){
-        $this->personen=$this->db->table('projekte_mitglieder');
-        $this->personen->select('mitgliedid, id, username');
-        $this->personen->join('mitglieder', 'mitgliedid=mitglieder.id');
+        $this->personen=$this->db->table('mitglieder');
+        $this->personen->select('id');
+        $this->personen->join('projekte_mitglieder', 'mitgliedid=mitglieder.id', 'left');
         $this->personen->where('projektid',$id);
         $result= $this->personen->get();
+
         return $result->getResultArray();
     }
 
@@ -46,7 +47,7 @@ class MitgliederModel extends Model
         if (isset($_POST['check'])){
             $this->eintrag = $this->db->table('projekte_mitglieder');
             $this->eintrag->insert(array('projektid' => $_SESSION['projektid'],
-                'mitgliedid' => $_POST['id']));
+                'mitgliedid' => $this->db->insertID()));
         }
     }
 
@@ -54,17 +55,39 @@ class MitgliederModel extends Model
 
         $this->personen = $this->db->table('mitglieder');
         $this->personen->where('mitglieder.id', $_POST['id']);
-        if ($_POST['passwort']==''|| !isset($_POST['passwort'])){
+        if (!isset($_POST['passwort'])){
             $this->personen->update(array('username' => $_POST['username'],
                 'e-mail' => $_POST['email']));
         }else{
-            $this->personen->update(array('username' => $_POST['username'],
+            if ($_POST['passwort']==''){
+                $this->personen->update(array('username' => $_POST['username'],
+                    'e-mail' => $_POST['email']));
+            }else{ $this->personen->update(array('username' => $_POST['username'],
                 'e-mail' => $_POST['email'],
-                'passwort' => password_hash($_POST['passwort'], PASSWORD_DEFAULT)));
+                'passwort' => password_hash($_POST['passwort'], PASSWORD_DEFAULT)));}
+
+        }
+        if (isset($_POST['check'])){
+            $this->eintrag = $this->db->table('projekte_mitglieder');
+            $this->eintrag->insert(array('projektid' => $_SESSION['projektid'],
+                'mitgliedid' => $_POST['id']));
+        } else {
+            $this->eintrag = $this->db->table('projekte_mitglieder');
+            $this->eintrag->where('projektid' , $_SESSION['projektid'] );
+            $this->eintrag->where( 'mitgliedid', $_POST['id']);
+            $this->eintrag->delete();
         }
 
     }
     public function deletemitglied() {
+        $this->aufgabenmitglieder = $this->db->table('aufgaben_mitglieder');
+        $this->aufgabenmitglieder->where('mitgliedid', $_POST['id']);
+        $this->aufgabenmitglieder->delete();
+
+        $this->projektemitglieder = $this->db->table('projekte_mitglieder');
+        $this->projektemitglieder->where('mitgliedid', $_POST['id']);
+        $this->projektemitglieder->delete();
+
         $this->personen = $this->db->table('mitglieder');
         $this->personen->where('mitglieder.id', $_POST['id']);
         $this->personen->delete();
