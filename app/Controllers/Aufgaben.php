@@ -18,13 +18,6 @@ class Aufgaben extends BaseController
             $data['aufgabe']=$this->AufgabenModel->getData($_POST['id']);
             $data['aufgabenmitglieder']=$this->AufgabenModel->getAufagabenMitglieder($_POST['id']);
         }
-        if (isset($_POST['btnLoeschen'])){
-            $data['aufgabe']=$this->AufgabenModel->getData($_POST['id']);
-            $data['title']='Aufgabe löschen?';
-            echo view('templates/Header',$data);
-            echo view('Aufgaben/bestaetigen', $data);
-            return view('templates/footer');
-        }
         $data['aufgaben']= $this->AufgabenModel->getData();
         $data['reiter']= $this->AufgabenModel->getReiter();
         $data['mitglieder']= $this->AufgabenModel->getMitglieder();

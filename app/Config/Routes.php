@@ -43,6 +43,7 @@ $routes->get('Projekte', 'Projekte::index');
 $routes->get('Mitglieder', 'Mitglieder::index');
 $routes->get('Reiter', 'Reiter::index');
 $routes->get('Logout', 'Login::logout');
+$routes->get('Aufgaben/submit_edit', 'Aufgaben::submit_edit');
 
 //Login
 $routes->post('Login', 'Login::index');
@@ -69,6 +70,7 @@ $routes->post('Reiter', 'Reiter::index');
 $routes->post('Aufgaben/submit_edit', 'Aufgaben::submit_edit');
 $routes->post('Aufgaben/Aufgaben/submit_edit', 'Aufgaben::submit_edit');
 $routes->post('Aufgaben', 'Aufgaben::index');
+$routes->post('Aufgaben/loeschen', 'Aufgaben::loeschen');
 
 
 

@@ -23,12 +23,10 @@ class Projekte extends BaseController
             $_SESSION['projektname']=$data['aktprojekt']['Name'];
         }
         if (isset($_POST['btnLoeschen'])){
-            $data['project']=$this->ProjektModel->getData($_POST['id']);
-            $data['title']='Projekt löschen?';
-            echo view('templates/Header',$data);
-            echo view('Projekte/bestaetigen', $data);
-            return view('templates/footer');
-        }
+            $this->ProjektModel->deleteProject();
+            if ($_POST['id']==$_SESSION['projektid']){
+                $_SESSION['projektid']=0;
+        }}
         $data['projecte']= $this->ProjektModel->getData();
 
         $data['title']='Projekte';
@@ -49,13 +47,6 @@ class Projekte extends BaseController
             }
             return redirect()->to(base_url('Projekte'));
 
-        }
-        if (isset($_POST['btnBestaetigen'])){
-            $this->ProjektModel->deleteProject();
-            if ($_POST['id']==$_SESSION['projektid']){
-                $_SESSION['projektid']=0;
-            }
-            return redirect()->to(base_url('Projekte'));
         }
         if (isset($_POST['btnReset'])){
             return redirect()->to(base_url('Projekte'));

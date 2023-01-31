@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1', //'sql90.your-server.de',
-        'username' => 'root',//nibaue_1
-        'password' => '',   //wHsjuDrkm5Nu2vSC
-        'database' => 'webentwicklung', //nibaue_db1
+        'hostname' => '127.0.0.1',//'127.0.0.1', //'sql90.your-server.de',
+        'username' => 'root',//root //nibaue_1
+        'password' => '',   //'' //wHsjuDrkm5Nu2vSC
+        'database' => 'webentwicklung', //webentwicklung //nibaue_db1
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

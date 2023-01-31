@@ -23,17 +23,54 @@
                         </a>
                     </form>
                 </td><td>
-                        <form action="Reiter/loeschenbestaetigen" method="post">
-                            <a>
-                                <input type="hidden" value="<?=$item['id']?>" name="id" id="id">
-                                <button class='btn' name="btnLoeschen"><i class='bi bi-trash3 text-primary'></i></button>
-                            </a>
-                        </form>
-                </td>
+
+<!-- Button für das Modal -->
+                        <button class="btn"
+                                type="button"
+                                id="deleteBtn"
+                                data-toggle='modal'
+                                data-target='#löschBestätigung'
+                                data-name='<?= $item["name"] ?>'
+                                data-id="<?=$item['id']?>"
+                                data-delete-link='<?= base_url("Reiter/submit_edit") ?>'><i class='bi bi-trash3 text-primary'></i></button>
+
+
 
             <?php endforeach; ?>
             </tbody>
         </table>
+    <!-- Das Modal -->
+    </td>
+    <div class="modal fade" id="löschBestätigung" tabindex="-1" aria-labelledby="löschBestätigungLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="löschBestätigungLabel">Reiter löschen?</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Soll der Reiter gelöscht werden?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Abbrechen</button>
+                    <a id="deleteBtn" type="button" class="btn btn-primary">Bestätigen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Java Script -->
+    <script type="text/javascript" defer>
+        const deleteModal = document.getElementById('löschBestätigung')
+        deleteModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget;
+            const username = button.getAttribute('data-name');
+            const del_link = button.getAttribute('data-delete-link');
+            const modalText = deleteModal.querySelector('.modal-body p');
+            const deleteBtn = deleteModal.querySelector('#deleteBtn');
+
+            modalText.textContent = `Soll das Mitglied gelöscht werden?`;
+            deleteBtn.setAttribute("href", del_link);
+        });
+    </script>
         <div class="h3 mt-5">
             <form action="Reiter/submit_edit" method="post">
             <?= (isset($reiter['id']))? 'Bearbeiten': 'Erstellen' ?>

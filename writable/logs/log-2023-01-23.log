@@ -17,3 +17,60 @@ in APPPATH\Models\AufgabenModel.php on line 89.
  4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
  5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-23 14:09:49 --> Undefined array key "projektid"
+in APPPATH\Controllers\Mitglieder.php on line 21.
+ 1 APPPATH\Controllers\Mitglieder.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projektid"', 'APPPATH\\Controllers\\Mitglieder.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-23 14:11:07 --> mysqli_sql_exception: Duplicate entry '2-9' for key 'projektid' in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\MitgliederModel.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Mitglieder.php(43): App\Models\MitgliederModel->updatemitglied()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-23 14:11:07 --> Duplicate entry '2-9' for key 'projektid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (:projektid:, :mitgliedid:)', [...], false)
+ 5 APPPATH\Models\MitgliederModel.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Mitglieder.php(43): App\Models\MitgliederModel->updatemitglied()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-23 14:13:53 --> mysqli_sql_exception: Duplicate entry '2-9' for key 'projektid' in C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\codeigniteru6\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\codeigniteru6\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\codeigniteru6\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\codeigniteru6\app\Models\MitgliederModel.php(74): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\codeigniteru6\app\Controllers\Mitglieder.php(43): App\Models\MitgliederModel->updatemitglied()
+#6 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+#7 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+#8 C:\xampp\htdocs\codeigniteru6\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniteru6\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-23 14:13:53 --> Duplicate entry '2-9' for key 'projektid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (\'2\', \'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `projekte_mitglieder` (`projektid`, `mitgliedid`) VALUES (:projektid:, :mitgliedid:)', [...], false)
+ 5 APPPATH\Models\MitgliederModel.php(74): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Mitglieder.php(43): App\Models\MitgliederModel->updatemitglied()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Mitglieder->submit_edit()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitglieder))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

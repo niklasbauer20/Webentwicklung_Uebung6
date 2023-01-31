@@ -1,5 +1,5 @@
 
-    <div class="col">
+    <div class="col-8">
         <div class="row">
 
             <?php foreach ($reiter as $item):?>

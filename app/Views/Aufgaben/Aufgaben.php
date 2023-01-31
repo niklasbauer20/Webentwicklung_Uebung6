@@ -26,10 +26,10 @@
                             </a>
                         </form>
                     </td><td>
-                        <form action="Aufgaben" method="post">
-                            <a>
+                        <form  action="Aufgaben/submit_edit" method="post">
+                           <a>
                                 <input type="hidden" value="<?=$item['id']?>" name="id" id="id">
-                                <button class='btn' name="btnLoeschen"><i class='bi bi-trash3 text-primary'></i></button>
+                                <button id="delete" type="submit" class='btn' onclick="myFunction()" name="btnBestaetigen"><i class='bi bi-trash3 text-primary'></i></button>
                             </a>
                         </form>
                     </td>
@@ -90,4 +90,12 @@
     </div>
     </form>
 </div>
+
+<script>
+    function myFunction() {
+        if (!confirm("Möchten Sie das wirklich loeschen?")){
+            this.preventDefault();
+        }
+    }
+</script>
 
